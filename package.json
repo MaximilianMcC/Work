@@ -1,0 +1,17 @@
+{
+  "name": "work",
+  "version": "1.0.0",
+  "description": "OneNote but its actually good",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "Max McCarthy",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^25.3.1",
+    "electron-reload": "^2.0.0-alpha.1"
+  }
+}
