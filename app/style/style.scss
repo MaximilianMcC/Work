@@ -1,4 +1,42 @@
+$text: #fcfcfd;
+$background: #121721;
+$primary: #4d6089;
+$secondary: #161b27;
+$accent: #6278a7;
+
+
 * {
 	margin: 0;
 	padding: 0;
+}
+
+body {
+	background-color: $background;
+}
+
+
+// Text and whatnot
+h1, h2, h3, h4, h5, h6, p, a, button, input {
+	font-family: 'Calibri', Arial, sans-serif;
+	color: $text;
+}
+
+
+
+
+// Sidebar
+.sidebar {
+	position: absolute;
+	z-index: 999999;
+	top: 0;
+	width: 20%;
+	height: 100%;
+
+	background-color: $secondary;
+	box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.2);
+	transition: left 0.4s ease;
+
+	// Sidebar states
+	&.show { left: 0; }
+	&.hide { left: -20%; }
 }
