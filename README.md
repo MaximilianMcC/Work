@@ -57,3 +57,6 @@ Book: Digital Art
  - Page: Poster Design
  - Page: Wallpaper
 ```
+
+# UX Wireframes
+![Wireframe 1](https://i.imgur.com/rMDo5Da.png)
