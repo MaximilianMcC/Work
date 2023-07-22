@@ -1,10 +1,20 @@
 document.addEventListener("keydown", (e) => {
 
-	// TODO: Use switch
-	// Toggle the sidebar
-	if (e.ctrlKey && e.key === "b") {
+	switch (true) {
+		case e.ctrlKey && e.key === "b":
+			e.preventDefault();
+			document.querySelector(".sidebar").classList.toggle("hidden");
+			break;
+	
+		case e.ctrlKey && e.shiftKey && e.key === ">":
+			e.preventDefault();	
+			increaseFontSize();	
+			break;
 
-		document.querySelector(".sidebar").classList.toggle("hidden");
+		case e.ctrlKey && e.shiftKey && e.key === "<":
+			e.preventDefault();	
+			decreaseFontSize();	
+			break;
 	}
 
 });
