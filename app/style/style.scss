@@ -21,22 +21,44 @@ h1, h2, h3, h4, h5, h6, p, a, button, input {
 	color: $text;
 }
 
-
+main {
+	display: flex;
+}
 
 
 // Sidebar
+// TODO: Don't use stupid margin thing
 .sidebar {
-	position: absolute;
-	z-index: 999999;
-	top: 0;
-	width: 20%;
-	height: 100%;
+	$width: 15%;
 
 	background-color: $secondary;
-	box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.2);
-	transition: left 0.4s ease;
+	width: $width;
+	height: 100vh;
+	position: fixed;
+	left: -$width;
+	transition: left 0.3s ease;
 
-	// Sidebar states
-	&.show { left: 0; }
-	&.hide { left: -20%; }
+	box-sizing: border-box;
+	padding: 10px;
+	
+	&.hidden {
+		left: 0;
+
+		&+.page {
+			margin-left: $width;
+			transition: margin-left 0.3s ease;
+		}
+	}
+}
+
+// Page
+.page {
+	background-color: $background;
+	height: 100vh;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px;
+
+	// TODO: Dont use margin animation stuff its rubbish
+	transition: margin-left 0.3s ease;
 }
