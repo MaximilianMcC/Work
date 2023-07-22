@@ -16,7 +16,7 @@ body {
 
 
 // Text and whatnot
-h1, h2, h3, h4, h5, h6, p, a, button, input {
+h1, h2, h3, h4, h5, h6, p, a, button, input, li, textarea {
 	font-family: 'Calibri', Arial, sans-serif;
 	color: $text;
 }
@@ -61,4 +61,19 @@ main {
 
 	// TODO: Dont use margin animation stuff its rubbish
 	transition: margin-left 0.3s ease;
+}
+
+
+
+
+// Editor
+#editor {
+	color: white;
+	font-family: 'Calibri', Arial, sans-serif;
+
+	border: none;
+	resize: none;
+	width: 100%;
+	height: 100%;
+	outline: none;
 }
