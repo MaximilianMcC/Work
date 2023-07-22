@@ -33,6 +33,13 @@ Work is an app that is similar to stuff such as OneNote, Word/Powerpoint, Google
 - [ ] Books saved in custom file format (.work, .wrk, something else idk)
 - [ ] Variables to store stuff that can be changed a lot (someone name for example)
 - [ ] Simple image editor (drawing, shapes, images with multiple layers)
+- [ ] Open multiple pages in tabs at the top like in a web browser
+- [ ] Quick notes taking section
+- [ ] Scrum board
+- [ ] Timer/clock
+- [ ] Smooth caret animation
+- [ ] Emoji support with different emoji packs (twemoji, apple, android, etc)
+- [ ] Navigable minimap (choice to render characters/images, or shapes)
 
 # General structure
 Each document will be called a "book", which will be a single file. A book can contain as many "pages" as you'd like. These pages are infinite, to a degree. Here is an example of a student:
