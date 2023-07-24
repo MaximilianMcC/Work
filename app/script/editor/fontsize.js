@@ -19,17 +19,13 @@ function decreaseFontSize() {
 // Set the font size to a value. Size is in px
 function setFontSize(size) {
 
-	// Check for if some text is selected
-	const selection = window.getSelection();
-	if (selection .rangeCount <= 0) return;
+	// Turn the font size into pixels
+	size += "px";
 
-	// Get the selected text
-	const range = selection.getRangeAt(0);
+	// Select all of textareas
+	document.querySelectorAll(".text-area .editor").forEach(textArea => {
 
-	// Wrap the text in a span with increased font-size
-	const newText = document.createElement("span");
-	newText.style.fontSize = (size + "px");
-	range.surroundContents(newText);
-
-	console.log(size);
+		// Set their new fontsize
+		textArea.style.fontSize = size;
+	});
 }

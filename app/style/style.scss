@@ -1,5 +1,6 @@
 $text: #fcfcfd;
 $background: #121721;
+$editor-background: #171b23;
 $primary: #4d6089;
 $secondary: #161b27;
 $accent: #6278a7;
@@ -29,7 +30,7 @@ main {
 // Sidebar
 // TODO: Don't use stupid margin thing
 .sidebar {
-	$width: 15%;
+	$width: 350px;
 
 	background-color: $secondary;
 	width: $width;
@@ -57,9 +58,8 @@ main {
 	height: 100vh;
 	width: 100%;
 	box-sizing: border-box;
-	padding: 10px;
 
-	// TODO: Dont use margin animation stuff its rubbish
+	// TODO: Don't use margin animation stuff its rubbish
 	transition: margin-left 0.3s ease;
 }
 
@@ -68,12 +68,25 @@ main {
 
 // Editor
 #editor {
-	color: white;
-	font-family: 'Calibri', Arial, sans-serif;
-
-	border: none;
-	resize: none;
-	width: 100%;
 	height: 100%;
-	outline: none;
+	display: flex;
+
+	.text-area {
+		color: white;
+		font-family: 'Calibri', Arial, sans-serif;
+		font-size: 24px;
+		
+		box-sizing: border-box;
+		border: none;
+		resize: none;
+		outline: none;
+		padding: 10px;
+
+		width: 100%;
+		height: 100%;
+
+		&:focus {
+			background-color: lighten($editor-background, 1%);
+		}
+	}
 }
