@@ -15,6 +15,10 @@ document.addEventListener("keydown", (e) => {
 			e.preventDefault();	
 			decreaseFontSize();	
 			break;
+		
+		case e.ctrlKey && e.key === "c":
+			copyLine();
+			break;
 	}
 
 });

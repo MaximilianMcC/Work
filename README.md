@@ -8,7 +8,7 @@ Work is an app that is similar to stuff such as OneNote, Word/Powerpoint, Google
 - [x] Setup basic electron project
 - [ ] Way to create a document
 - [ ] Way to load a document
-- [ ] Ctrl+c to copy entire line
+- [x] Ctrl+c to copy entire line
 - [ ] Multiple cursors
 - [ ] Markdown support for writing
 - [ ] Different headings (h1, h2, h3)
@@ -17,7 +17,7 @@ Work is an app that is similar to stuff such as OneNote, Word/Powerpoint, Google
 - [ ] Images, videos, audio, and general files
 - [ ] Tables
 - [ ] Colored text
-- [ ] Change text font size
+- [x] Change text font size
 - [ ] Links (with optional embeds)
 - [ ] Maths expression writer (with syntax highlighting)
 - [ ] Code blocks with syntax (with syntax highlighting)
@@ -40,6 +40,8 @@ Work is an app that is similar to stuff such as OneNote, Word/Powerpoint, Google
 - [ ] Smooth caret animation
 - [ ] Emoji support with different emoji packs (twemoji, apple, android, etc)
 - [ ] Navigable minimap (choice to render characters/images, or shapes)
+- [ ] Different layout modes (split, third, etc)
+- [ ] Shortcut list that can be edited
 
 # General structure
 Each document will be called a "book", which will be a single file. A book can contain as many "pages" as you'd like. These pages are infinite, to a degree. Here is an example of a student:
