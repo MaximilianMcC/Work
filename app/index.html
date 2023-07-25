@@ -10,6 +10,7 @@
 	<script src="./script/utils.js" defer></script>
 	<script src="./script/editor.js" defer></script>
 	<script src="./script/editor/fontsize.js" defer></script>
+	<script src="./script/editor/textArea.js" defer></script>
 	<script src="./script/shortcuts.js" defer></script>
 
 </head>
@@ -25,12 +26,20 @@
 
 		<!-- Page content -->
 		<section class="page">
-			<div id="editor">
+
+			<!-- Toolbar -->
+			<div class="toolbar">
 				
+				<!-- Add a new textarea to the right of the current -->
+				<button id="addTextAreaRight" title="Add a text area.">+</button>
+				<button id="removeTextAreaRight" title="Add a text area.">-</button>
+
+			</div>
+
+			<div id="editor">
 				<!-- Mandatory textarea. Others can be added/removed -->
 				<div class="text-area" contenteditable="true"><div class="editor">Test 1</div></div>
 				<div class="text-area" contenteditable="true"><div class="editor">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet quas facere facilis debitis? Molestiae in accusantium at fugiat, ullam nam debitis magnam. Voluptatibus porro iusto doloribus similique corporis eligendi architecto?</div></div>
-
 			</div>
 		</section>
 
