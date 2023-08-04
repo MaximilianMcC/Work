@@ -9,8 +9,10 @@
 	<link rel="stylesheet" href="./style/style.css">
 
 	<!-- Javascript -->
+	<script src="./script/utils.js" defer></script>
 	<script src="./script/editor.js" defer></script>
 	<script src="./script/shortcuts.js" defer></script>
+	<script src="./script/stats.js" defer></script>
 
 </head>
 <body>
@@ -28,9 +30,31 @@
 		<!-- Page content -->
 		<section class="page">
 
-			<div id="editor"></div>
-
+			<!-- Place where you write all the text -->
+			<div class="editor">
+				
+				<div class="textarea">
+					<div class="caret"></div>
+				</div>
+			</div>
 		</section>
+
+
+		<!-- Status bar thingy --> 
+		<div class="status-bar">
+			
+			<!-- Stuff on the left side of the status bar -->
+			<div class="left">
+				<p id="wordCount">0 words</p>
+			</div>
+
+			<!-- Stuff on the right side of the status bar -->
+			<div class="right">
+				<p id="rowsAndColumns">Row: 1, Col: 1</p>
+			</div>
+
+		</div>
+
 	</main>
 </body>
 </html>
