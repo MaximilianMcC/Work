@@ -11,6 +11,7 @@ $background-tertiary: #333333;
 $text-primary: #eaeaea;
 $text-secondary: #cccccc;
 $text-tertiary: #808080;
+$caret-color: magenta;
 
 
 * {
@@ -25,17 +26,44 @@ body {
 
 
 
-#editor {
+.editor {
 	color: $text-primary;
-	background-color: green;
+	font-size: 50px;
+
+	.caret {
+		display: inline;
+		border-right: 0.1em solid $caret-color;
+		animation: blink 0.8s infinite;
+	}
+}
+
+// Blinking cursor animation
+@keyframes blink {
+	0% { opacity: 25%; }
+	50% { opacity: 100%; }
+	100% { opacity: 25%; }
 }
 
 
 
 
-
-
-
+.status-bar {
+	box-sizing: border-box;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	
+	padding: 10px;
+	background-color: $background-secondary;
+	color: $text-secondary;
+	
+	.right {
+		text-align: right;
+	}
+}
 
 
 

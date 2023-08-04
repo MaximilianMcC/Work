@@ -12,9 +12,41 @@ body {
   background-color: #1e1e1e;
 }
 
-#editor {
+.editor {
   color: #eaeaea;
-  background-color: green;
+  font-size: 50px;
+}
+.editor .caret {
+  display: inline;
+  border-right: 0.1em solid magenta;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 25%;
+  }
+  50% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 25%;
+  }
+}
+.status-bar {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 10px;
+  background-color: #252526;
+  color: #cccccc;
+}
+.status-bar .right {
+  text-align: right;
 }
 
 .sidebar {
