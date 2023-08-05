@@ -4,7 +4,7 @@ const editor = document.querySelector(".textarea");
 //? Each item in the array is a new line
 let output = [""];
 
-// Store the cursor position rows and columns
+// Store the caret position rows and columns
 // TODO: Smooth cursor animation
 let caretX = 0;
 let caretY = 0;
@@ -18,7 +18,7 @@ window.addEventListener("keydown", (e) => {
 	switch (e.key) {
 
 		case "Backspace":
-			output = output.slice(0, -1);
+			output[caretY] = output[caretY].slice(0, -1);
 			caretX--;
 
 			// Check if we are going up a line
@@ -44,8 +44,7 @@ window.addEventListener("keydown", (e) => {
 
 
 
-	// Check for if the key string is larger than 1 character
-
+	// Check for if the key string is larger than 1 character (normal letter key thing)
 	if (e.key.length === 1) {
 
 		output[caretY] += e.key;
@@ -74,13 +73,8 @@ window.addEventListener("keydown", (e) => {
 		if (i != output.length) outputHtml += "\n";
 	}
 
-
 	// Write the text to the DOM
 	editor.innerHTML = outputHtml;
-
-
-
-	// TODO: Row reset to 0 when go to next column
 
 
 
