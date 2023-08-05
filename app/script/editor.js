@@ -64,6 +64,13 @@ window.addEventListener("keydown", (e) => {
 			}
 			break;
 
+		case "End":
+			caretX = output[caretY].length;
+			break;
+		
+		case "Home":
+			caretX = 0;
+			break;
 	}
 
 
