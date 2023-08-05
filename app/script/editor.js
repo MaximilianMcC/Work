@@ -18,6 +18,8 @@ window.addEventListener("keydown", (e) => {
 	switch (e.key) {
 
 		case "Backspace":
+
+			// Remove the last character from the current line
 			output[caretY] = output[caretY].slice(0, -1);
 			caretX--;
 
@@ -38,6 +40,28 @@ window.addEventListener("keydown", (e) => {
 
 			// Make the new line
 			if (!output[caretY]) output[caretY] = "";
+			break;
+
+		case "ArrowLeft":
+			caretX--;
+
+			// Check if it exceeds the line, and go to end of line above
+			if (caretX < 0)
+			{
+				caretY--;
+				caretX = output[caretY].length;
+			}
+			break;
+
+		case "ArrowRight":
+			caretX++;
+
+			// Check if it exceeds the line, and go to end of line above
+			if (caretX > output[caretY].length)
+			{
+				caretY++;
+				caretX = 0;
+			}
 			break;
 
 	}
