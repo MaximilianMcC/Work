@@ -73,38 +73,35 @@ window.addEventListener("keydown", (e) => {
 			break;
 	}
 
-
-
-	// Check for if the key string is larger than 1 character (normal letter key thing)
-	if (e.key.length === 1) {
-
-		output[caretY] += e.key;
-		caretX++;
-	}
-
 	// Clamp cursor position
 	if (caretX < 0) caretX = 0;
 	if (caretY < 0) caretY = 0;
 
+	// Check for if the key string is larger than 1 character (normal letter key thing)
+	if (e.key.length === 1) {
+		
+		output[caretY] = insert(output[caretY], e.key, caretX);
+		caretX++;
+	}
 
 	// TODO: Don't replace the content all the time. Edit instead
 	// TODO: Don't replace the caret. Use the old one
 
 	// Add the cursor to the output html
 	// TODO: Add smooth cursor animation and blinking animation
-	const caret = `<div class="caret"></div>`;
+	const caretHtml = `<div class="caret"></div>`;
 	let outputHtml = ``;
 	for (let i = 0; i < output.length; i++) {
 
 		// Check if the cursor should be added
-		if (i == caretY) outputHtml += `<pre>${output[i].slice(0, caretX)}${caret}${output[i].slice(caretX)}</pre>`;
+		if (i == caretY) outputHtml += `<pre>${insert(output[i], caretHtml, caretX)}</pre>`;
 		else outputHtml += output[i];
 
 		// Check if a new line must be added
 		if (i != output.length) outputHtml += "\n";
 	}
 
-	// Write the text to the DOM
+	// Write the new text to the DOM
 	editor.innerHTML = outputHtml;
 
 
